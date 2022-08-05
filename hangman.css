@@ -1,0 +1,12 @@
+<style type="text/css">
+	h1 {text-align: center;}
+	p {text-align: center;}
+	div {
+		text-align: center;
+		display: inline-block;
+		margin-right: 10px;
+	}
+	button {
+		background-color: skyblue;
+	}
+</style>
