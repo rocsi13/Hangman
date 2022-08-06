@@ -12,10 +12,10 @@
 
 	function displayLines() {
 		for (var i = 0; i < letters.length; ++i) {
-			var col = document.createElement("div");
-			col.innerText = "____";
-			col.id = i;
-			document.getElementById("word-lines").appendChild(col);
+			var underscore = document.createElement("div");
+			underscore.innerText = "____";
+			underscore.id = i;
+			document.getElementById("word-lines").appendChild(underscore);
 		}
 	}
 
@@ -32,7 +32,7 @@
 				var col = document.createElement("div");
 				col.className = "col-1 my-2 mx-2";
 				col.id = "col" + j + i;
-				roww.appendChild(col);
+				row.appendChild(col);
 				keys(i, i, j);
 			}
             		for (var l = 0; l < 10; l++) {
