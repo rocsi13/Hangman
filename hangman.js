@@ -1,18 +1,18 @@
-let letters = [];
+let leters = [];
 let lives = 7;
 let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 let numberOfLives = document.createElement("h3");
-let lettersGuessed = 0;
+let letersGuessed = 0;
 
 function addWord() {
 	let word = document.getElementById("word-input").value;
 	word = word.toUpperCase();
 	document.getElementById("word-input").value = "";
-	letters = word.split("");
+	leters = word.split("");
 }
 
 function displayLines() {
-	for (let i = 0; i < letters.length; ++i) {
+	for (let i = 0; i < leters.length; ++i) {
 		let col = document.createElement("div");
 	    	col.innerText = "____";
 	    	col.id = i;
@@ -74,24 +74,24 @@ function displayLives() {
 function guessLetter(letterChosen) {
 	let mess = (document.getElementById("mess").innerText = "");
 	let counter = 0;
-	for (let i = 0; i < letters.length; ++i) {
-	    	if (letterChosen.toUpperCase() == letters[i]) {
+	for (let i = 0; i < leters.length; ++i) {
+	    	if (letterChosen.toUpperCase() == leters[i]) {
 			let spaceForLetter = document.getElementById(i);
 	      		if (spaceForLetter.innerText == "____") {
-	        		spaceForLetter.innerText = letters[i];
-	        		++lettersGuessed;
+	        		spaceForLetter.innerText = leters[i];
+	        		++letersGuessed;
 	      		} else {
 	        		let mess = document.getElementById("mess");
 	        		mess.innerText = "You already guessed this letter!";
 	      		}
-	      		if (lettersGuessed == letters.length) {
+	      		if (letersGuessed == leters.length) {
 	        		displayMessage();
 	      		}
 	    	} else {
 	      		++counter;
 	    	}
 	}
-	if (counter == letters.length) {
+	if (counter == leters.length) {
 	    	shortenLife();
 	}
 }
