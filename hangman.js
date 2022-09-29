@@ -31,12 +31,12 @@ function createKeyboard() {
 	    	row.className = "row";
 	    	row.id = "row" + j;
 	    	main.appendChild(row);
-	    	let roww = document.getElementById("row" + j);
+	    	let line = document.getElementById("row" + j);
 	    	for (let i = 0; i < 10 && i < alphabet.length; i++) {
 			let col = document.createElement("div");
 	      		col.className = "col-1 my-2 mx-2";
 	      		col.id = "col" + j + i;
-	      		roww.appendChild(col);
+	      		line.appendChild(col);
 	      		keys(i, i, j);
 	   	}
 	   	for (let l = 0; l < 10; l++) {
