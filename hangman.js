@@ -58,7 +58,7 @@ function addEventOnKeys() {
 	let buttons = document.getElementsByClassName("btn-primary");
 	for (btn of buttons) {
 		btn.onclick = function () {
-	      	guessLetter(this.id);
+	      		guessLetter(this.id);
 	  	};
 	  }
 }
